@@ -1,0 +1,12 @@
+<div [ngClass] = "{
+					'post-like': 	  postStatus === true,
+					'post-dislike': postStatus === false}"
+	style="border:1px solid gray;  border-radius:20px; margin:2%;padding:1.5%;">
+  <h1>{{postTitle}}</h1>
+  <p>{{postContent}}</p>
+  <h4>{{postCreated_at | date}}</h4>
+  <button type="button" name="button" style="background-color:green;border:1px solid gray; border-radius:3px;padding: 5px;"
+  	(click) = "like()">Love it ( {{postLoveIts}} )</button>
+  <button type="button" name="button" style="background-color:red;margin-left:2%; border:1px solid gray; border-radius:3px;padding: 5px;"
+      (click)="dislike()" >Don't Love it ( {{postDontLoveIts}} )</button>
+</div>
